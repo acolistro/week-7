@@ -35,6 +35,8 @@ class Anagram
 
     if (word1.to_set === word2.to_set) & (real_word1 === true) & (real_word2 === true)
       is_anagram = true
+    elsif ((word1 & word2).any?) === false
+      is_anagram = "antigram"
     else
       is_anagram = false
     end

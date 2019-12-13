@@ -20,4 +20,8 @@ describe('#week_7') do
     anagram = Anagram.new()
     expect(anagram.compare("bbt", "tab")).to(eq(false))
   end
+  it("returns 'antigram' if two words don't share any letters.") do
+    anagram = Anagram.new()
+    expect(anagram.compare("hi", "bye")).to(eq("antigram"))
+  end
 end
