@@ -8,4 +8,8 @@ describe('#week_7') do
     anagram = Anagram.new()
     expect(anagram.compare("bat", "tab")).to(eq(true))
   end
+  it("returns true if two words are anagrams even if there is a difference in case") do
+    anagram = Anagram.new()
+    expect(anagram.compare("Bat", "tAb")).to(eq(true))
+  end
 end
