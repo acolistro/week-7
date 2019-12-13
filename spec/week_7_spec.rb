@@ -4,6 +4,7 @@ require ('week_7')
 
 describe('#week_7') do
   it("returns true if two words are anagrams") do
-
+    anagram = Anagram.new()
+    expect(anagram.compare("bat", "tab")).to(eq(true))
   end
 end
