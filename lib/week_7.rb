@@ -10,10 +10,18 @@ class Anagram
     word1 = word1.downcase.chars
     word2 = word2.downcase.chars
 
-    is_word1 = (word1.select { |i| (i === (i.index-1) & (i.index-2)) })
-    is_word1 = (word1.select { |i| (i === (i.index-1) & (i.index-2)) })
+    def is_word(word)
+      word.each do |letter|
+        if letter[letter.index] === letter[(letter.index)-1] & letter[(letter.index)-2]
+          real_word = false
+        else
+          real_word = true
+        end
+      end
+      real_word
 
-    if (word1.to_set === word2.to_set) & (is_word1 === true) & (is_word2 === true)
+
+    if (word1.to_set === word2.to_set) & (word1.is_word === true) & (word2.is_word === true)
       is_anagram = true
     else
       is_anagram = false
@@ -21,4 +29,6 @@ class Anagram
     is_anagram
   end
 
+
+end
 end
