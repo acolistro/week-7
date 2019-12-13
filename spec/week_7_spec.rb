@@ -24,4 +24,8 @@ describe('#week_7') do
     anagram = Anagram.new()
     expect(anagram.compare("hi", "bye")).to(eq("antigram"))
   end
+  it("checks if there are any anagrams or antigrams in a multi-word string.") do
+    anagram = Anagram.new()
+    expect(anagram.compare("Hi, my bat has a tab, bye")).to(eq("this sentence contains at least on anagram", "this sentence contains at least one antigram"))
+  end
 end
