@@ -46,23 +46,20 @@ class Anagram
   end
 
   def contains_anagram?(sentence)
-    sentence = sentence.split(/ /)
-    word = ''
-    anagrams = ''
-    antigrams = ''
-
-    sentence.each do |word|
-      word.downcase.chars.to_set
+    sentence = sentence.downcase.split(/ /)
+    jumble_sentence = []
+    for word in sentence do
+      word = word.chars.sort.join
+      jumble_sentence.push(word)
     end
 
-    if (sentence.select{ |word| sentence.count(word) > 1 }).empty?
-      anagrams = "this sentence contains at least one anagram"
+    if jumble_sentence.length != jumble_sentence.uniq.length
+      anagram = "this sentence contains at least one anagram"
     else
-      anagrams = "this sentence contains no anagrams"
+      anagram = "this sentence contains no anagrams"
     end
-    anagrams
-
-
+    anagram  
   end
-
 end
+
+# if (sentence.select{ |word| sentence.count(word) > 1 }).empty?
