@@ -7,10 +7,10 @@ class Anagram
   end
 
   def compare(word1, word2)
-    word1 = word1.chars
-    word2 = word2.chars
+    word1 = word1.chars.to_set
+    word2 = word2.chars.to_set
 
-    if ((word1 & word2) == word2)
+    if word1 === word2
       is_anagram = true
     else
       is_anagram = false

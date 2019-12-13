@@ -1,5 +1,6 @@
 require ('rspec')
 require ('pry')
+require ('set')
 require ('week_7')
 
 describe('#week_7') do
