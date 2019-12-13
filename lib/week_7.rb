@@ -11,7 +11,9 @@ class Anagram
     word2 = word2.downcase.chars
     real_word1 = ''
     real_word2 = ''
-
+    # sentence = sentence.split(/ /)
+    #
+    # sentence.each do |word|
 
     for letter in word1 do
       if (word1.find_index(letter) > 2) & ((letter[word1.find_index(letter)]) === (letter[word1.find_index(letter)-1])) & ((letter[word1.find_index(letter)]) === (letter[word1.find_index(letter)-2]))
@@ -42,4 +44,25 @@ class Anagram
     end
     is_anagram
   end
+
+  def contains_anagram?(sentence)
+    sentence = sentence.split(/ /)
+    word = ''
+    anagrams = ''
+    antigrams = ''
+
+    sentence.each do |word|
+      word.downcase.chars.to_set
+    end
+
+    if (sentence.select{ |word| sentence.count(word) > 1 }).empty?
+      anagrams = "this sentence contains at least one anagram"
+    else
+      anagrams = "this sentence contains no anagrams"
+    end
+    anagrams
+
+
+  end
+
 end
