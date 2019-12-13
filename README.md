@@ -13,7 +13,7 @@
 **Output:** _true_
 
 **Behavior:** _Checks if inputs are words_
-**Input:** _bat, tba_
+**Input:** _bbbat, taaab, btt _
 **Output:** _false_
 
 **Behavior:** _Checks if two words are antigrams_

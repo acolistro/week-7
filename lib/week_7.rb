@@ -16,6 +16,8 @@ class Anagram
     for letter in word1 do
       if (word1.find_index(letter) > 2) & ((letter[word1.find_index(letter)]) === (letter[word1.find_index(letter)-1])) & ((letter[word1.find_index(letter)]) === (letter[word1.find_index(letter)-2]))
         real_word1 = false
+      elsif ((word1 & ["a", "e", "i", "o", "u"]).any?) === false
+        real_word1 = false
       else
         real_word1 = true
       end
@@ -24,6 +26,8 @@ class Anagram
     for letter in word2 do
       if (word2.find_index(letter) > 2) & ((letter[word2.find_index(letter)]) === (letter[word2.find_index(letter)-1])) & ((letter[word2.find_index(letter)]) === (letter[word2.find_index(letter)-2]))
         real_word2 = false
+      elsif ((word1 & ["a", "e", "i", "o", "u"]).any?) === false
+        real_word1 = false
       else
         real_word2 = true
       end
