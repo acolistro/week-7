@@ -14,6 +14,6 @@ describe('#week_7') do
   end
   it("returns false if any of the words are NOT words indicated by three similar letters in a row") do
     anagram = Anagram.new()
-    expect(anagram.compare("Bbbat", "tAbbb")).to(eq(true))
+    expect(anagram.compare("Bbbat", "tAbbb")).to(eq(false))
   end
 end
