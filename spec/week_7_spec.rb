@@ -16,4 +16,8 @@ describe('#week_7') do
     anagram = Anagram.new()
     expect(anagram.compare("Bbbat", "tAbbb")).to(eq(false))
   end
+  it("returns false if any of the wordsare NOT words indicated by not containing a vowel") do
+    anagram = Anagram.new()
+    expect(anagram.compare("bbt", "tab")).to(eq(false))
+  end
 end
