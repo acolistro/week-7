@@ -58,7 +58,22 @@ class Anagram
     else
       anagram = "this sentence contains no anagrams"
     end
-    anagram  
+    anagram
+  end
+
+  def contains_antigram(sentence)
+    sentence = sentence.downcase.split(/ /)
+    jumble_sentence = []
+    for word in sentence do
+      word = word.chars.sort.join
+      jumble_sentence.push(word)
+    end
+    for word in jumble_sentence do
+      for letter in word do
+        
+      end
+    end
+
   end
 end
 
