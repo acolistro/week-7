@@ -70,7 +70,7 @@ class Anagram
     end
     for word in jumble_sentence do
       for letter in word do
-        
+        # each_char method???? remove similar chars and check if array is nil
       end
     end
 
