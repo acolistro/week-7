@@ -1,5 +1,5 @@
 class Anagram
-  attr_accessor(:word1, :word2)
+  # attr_accessor(:word1, :word2)
 
   def initialize(sentence1, sentence2)
     @sent1 = sentence1
@@ -10,6 +10,25 @@ class Anagram
     @letters2 = @words2.join.gsub("'", "").downcase.chars.sort
   end
 
+  def is_anagram?
+    if @words1 = @words2
+      return true
+    else
+      false
+  end
+
+  # def letter_count()
+  # counts = {}
+  #
+  #   word.each_char do |char|
+  #     next if char == " "
+  #     counts[char] = 0 unless counts.include?(char)
+  #     counts[char] += 1
+  #   end
+  #   counts
+  # end
+end
+end
   # def compare(word1, word2)
   #   word1 = word1.downcase.chars
   #   word2 = word2.downcase.chars
@@ -49,37 +68,37 @@ class Anagram
   #   is_anagram
   # end
 
-  def contains_anagram?(sentence)
-    sentence = sentence.downcase.split(/ /)
-    jumble_sentence = []
-    for word in sentence do
-      word = word.chars.sort.join
-      jumble_sentence.push(word)
-    end
-
-    if jumble_sentence.length != jumble_sentence.uniq.length
-      anagram = "this sentence contains at least one anagram"
-    else
-      anagram = "this sentence contains no anagrams"
-    end
-    anagram
-  end
-
-  def contains_antigram(sentence)
-    sentence = sentence.downcase.split(/ /)
-    jumble_sentence = []
-    for word in sentence do
-      word = word.chars.sort.join
-      jumble_sentence.push(word)
-    end
-    for word in jumble_sentence do
-      jumble_sentence.pop(word)
-       (word.split('').uniq & array_of_letters_allowed).length == input.length
-
-      end
-    end
-
-  end
-end
+#   def contains_anagram?(sentence)
+#     sentence = sentence.downcase.split(/ /)
+#     jumble_sentence = []
+#     for word in sentence do
+#       word = word.chars.sort.join
+#       jumble_sentence.push(word)
+#     end
+#
+#     if jumble_sentence.length != jumble_sentence.uniq.length
+#       anagram = "this sentence contains at least one anagram"
+#     else
+#       anagram = "this sentence contains no anagrams"
+#     end
+#     anagram
+#   end
+#
+#   def contains_antigram(sentence)
+#     sentence = sentence.downcase.split(/ /)
+#     jumble_sentence = []
+#     for word in sentence do
+#       word = word.chars.sort.join
+#       jumble_sentence.push(word)
+#     end
+#     for word in jumble_sentence do
+#       jumble_sentence.pop(word)
+#        (word.split('').uniq & array_of_letters_allowed).length == input.length
+#
+#       end
+#     end
+#
+#   end
+# end
 
 # if (sentence.select{ |word| sentence.count(word) > 1 }).empty?
