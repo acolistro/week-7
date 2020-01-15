@@ -1,5 +1,4 @@
 class Anagram
-  # attr_accessor(:word1, :word2)
 
   def initialize(sentence1, sentence2)
     @sent1 = sentence1
