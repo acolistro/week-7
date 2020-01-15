@@ -4,9 +4,9 @@ require ('set')
 require ('week_7')
 
 describe('#week_7') do
-  it("returns true if two words are anagrams") do
+  it("returns 'These words are anagrams' if two words are anagrams") do
     anagram = Anagram.new("chicken", "egg")
-    expect(anagram.is_anagram?).to(eq(false))
+    expect(anagram.is_anagram?).to(eq("These words are NOT anagrams!"))
   end
   # it("returns true if two words are anagrams") do
   #   anagram = Anagram.new()

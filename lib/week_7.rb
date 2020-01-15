@@ -11,10 +11,10 @@ class Anagram
   end
 
   def is_anagram?
-    if @words1 = @words2
-      return true
+    if @words1 == @words2
+      return "These words are anagrams!"
     else
-      false
+      "These words are NOT anagrams!"
   end
 
   # def letter_count()
