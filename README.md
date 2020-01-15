@@ -21,9 +21,9 @@ _This app was built to carry out the following behaviors:_
 **Input:** _hi, bye_
 **Output:** _true_
 
-**Behavior:** _Account for multiple words being anagrams or antigrams_
-**Input:** _but the tub is dirty_
-**Output:** _but, tub_
+**Behavior:** _Check whether sentences are anagrams_
+**Input:** _Conversation, Voices rant on_
+**Output:** _true_
 
 _it was built to practice behavior driven development with ruby_
 
@@ -34,8 +34,8 @@ _it was built to practice behavior driven development with ruby_
 * _Create a method to check whether two words share no characters_
 * _Create a method to check whether a word has three letters in a row_
 * _Create a method to check whether a word contains a vowel_
-* _Create a method that checks whether a multiple word sentence contains at least one anagram_
-* _Create a method that checks whether a multi word sentence contains at least one antigram_
+* _Create a method that checks whether two sentences are anagrams_
+* _Create a method that checks whether a sentence contains at least one non-word_
 
 ## Setup/Installation Requirements
 * _Access my github repository at https://github.com/acolistro/week-7.git and clone it to your local machine._
@@ -43,11 +43,11 @@ _it was built to practice behavior driven development with ruby_
 
 ## Known Bugs
 
-_The final spec, checking whether a multi-word sentence includes at least one antigram, is not currently passing._
+_Currently there are no known bugs_
 
 ## Support and contact details
 
-_If you find a bug or solution to pass the final spec, I highly encourage you to contact me at arcolistro@gmail.com and/or submit a pull request to this repository. Please note that this application is not built to be compatible with web-accessibility tools or be viewed on any browser other than the current version of the Chrome browser._
+_If you find a bug I highly encourage you to contact me at arcolistro@gmail.com and/or submit a pull request to this repository. Please note that this application is not built to be compatible with web-accessibility tools or be viewed on any browser other than the current version of the Chrome browser._
 
 ## Technologies Used
 

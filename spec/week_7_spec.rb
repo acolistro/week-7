@@ -28,26 +28,3 @@ describe('#week_7') do
     anagram = Anagram.new("Taco cat", "Caat tco")
     expect(anagram.sent_real?).to(eq("Your sentences contain one or more non-words"))
   end
-
-
-  # it("returns false if any of the words are NOT words indicated by three similar letters in a row") do
-  #   anagram = Anagram.new()
-  #   expect(anagram.compare("Bbbat", "tAbbb")).to(eq(false))
-  # end
-  # it("returns false if any of the wordsare NOT words indicated by not containing a vowel") do
-  #   anagram = Anagram.new()
-  #   expect(anagram.compare("bbt", "tab")).to(eq(false))
-  # end
-  # it("returns 'antigram' if two words don't share any letters.") do
-  #   anagram = Anagram.new()
-  #   expect(anagram.compare("hi", "bye")).to(eq("antigram"))
-  # end
-  # it("checks if there are any anagrams in a multi-word string.") do
-  #   anagram = Anagram.new()
-  #   expect(anagram.contains_anagram?("Hi my bat has a tab bye")).to(eq("this sentence contains at least one anagram"))
-  # end
-  # it("checks if there are any antigrams in a multi-word string.") do
-  #   anagram = Anagram.new()
-  #   expect(anagram.contains_antigram?("Hi my bat has a tab bye")).to(eq("this sentence contains at least one antigram"))
-  # end
-end
