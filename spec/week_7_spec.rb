@@ -16,6 +16,12 @@ describe('#week_7') do
     anagram = Anagram.new("swrd", "vbnm")
     expect(anagram.is_anagram?).to(eq("These words are NOT anagrams OR not real words!"))
   end
+  it("returns 'These words are antigrams' if two words share no letters in common") do
+    anagram = Anagram.new("zap", "bed")
+    expect(anagram.is_anagram?).to(eq("These words are antigrams"))
+  end
+
+
   # it("returns false if any of the words are NOT words indicated by three similar letters in a row") do
   #   anagram = Anagram.new()
   #   expect(anagram.compare("Bbbat", "tAbbb")).to(eq(false))
