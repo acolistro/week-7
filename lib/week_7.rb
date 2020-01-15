@@ -11,7 +11,7 @@ class Anagram
   end
 
   def is_anagram?
-    if @words1 == @words2
+    if @letters1 == @letters2
       return "These words are anagrams!"
     else
       "These words are NOT anagrams!"
