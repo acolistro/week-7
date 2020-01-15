@@ -18,7 +18,7 @@ describe('#week_7') do
   end
   it("returns 'These words are antigrams' if two words share no letters in common") do
     anagram = Anagram.new("zap", "bed")
-    expect(anagram.is_anagram?).to(eq("These words are antigrams"))
+    expect(anagram.is_antigram?).to(eq("These words are antigrams"))
   end
 
 

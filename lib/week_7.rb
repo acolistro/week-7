@@ -19,6 +19,14 @@ class Anagram
     end
   end
 
+  def is_antigram?
+    if (@letters1 & @letters2) == []
+      "These words are antigrams"
+    else
+      "These words are not antigrams"
+    end  
+  end
+
 end
 
 
