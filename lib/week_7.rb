@@ -1,8 +1,6 @@
 class Anagram
 
   def initialize(sentence1, sentence2)
-    @sent1 = sentence1
-    @sent2 = sentence2
     @words1 = sentence1.split
     @words2 = sentence2.split
     @letters1 = @words1.join.downcase.gsub("'", '').chars.sort
