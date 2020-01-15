@@ -6,8 +6,8 @@ class Anagram
     @sent2 = sentence2
     @words1 = sentence1.split
     @words2 = sentence2.split
-    @letters1 = @words1.join.gsub("'", "").downcase.chars.sort
-    @letters2 = @words2.join.gsub("'", "").downcase.chars.sort
+    @letters1 = @words1.join.downcase.gsub("'", '').chars.sort
+    @letters2 = @words2.join.downcase.gsub("'", '').chars.sort
   end
 
   def is_anagram?
@@ -24,7 +24,16 @@ class Anagram
       "These words are antigrams"
     else
       "These words are not antigrams"
-    end  
+    end
+  end
+
+  def sent_is_anagram?
+    str = (@letters1 + @letters2).join
+      if (@letters1 == @letters2) && ((str =~ /[aeiou]/) <= 1)
+        return "Your sentences are anagrams!"
+      else
+        return "Your sentences are not anagrams OR contain non-words"
+      end
   end
 
 end

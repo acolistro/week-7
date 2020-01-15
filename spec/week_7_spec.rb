@@ -20,6 +20,10 @@ describe('#week_7') do
     anagram = Anagram.new("zap", "bed")
     expect(anagram.is_antigram?).to(eq("These words are antigrams"))
   end
+  it("returns 'your sentences are anagrams' if they share all characters") do
+    anagram = Anagram.new("Conversation", "Voices rant on")
+    expect(anagram.sent_is_anagram?).to(eq("Your sentences are anagrams!"))
+  end
 
 
   # it("returns false if any of the words are NOT words indicated by three similar letters in a row") do
