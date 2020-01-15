@@ -36,8 +36,18 @@ class Anagram
       end
   end
 
+  def sent_real?
+    words = @words1 + @words2
+    i = 0
+    words.each do |word|
+      if (word =~ /[aeiou]/) >= 2
+        i += 1
+      else
+        return "Your sentences contain one or more non-words"
+      end
+    end
+  end
 end
-
 
 
   # def letter_count()
