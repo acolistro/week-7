@@ -11,11 +11,17 @@ class Anagram
   end
 
   def is_anagram?
-    if @letters1 == @letters2
-      return "These words are anagrams!"
-    else
-      "These words are NOT anagrams!"
+    str = (@letters1 + @letters2).join
+      if (@letters1 == @letters2) && ((str =~ /[aeiou]/) <= 1)
+        return "These words are anagrams!"
+      else
+        "These words are NOT anagrams OR not real words!"
+    end
   end
+
+end
+
+
 
   # def letter_count()
   # counts = {}
@@ -27,8 +33,7 @@ class Anagram
   #   end
   #   counts
   # end
-end
-end
+
   # def compare(word1, word2)
   #   word1 = word1.downcase.chars
   #   word2 = word2.downcase.chars

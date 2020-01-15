@@ -6,11 +6,15 @@ require ('week_7')
 describe('#week_7') do
   it("returns 'These words are anagrams' if two words are anagrams") do
     anagram = Anagram.new("chicken", "egg")
-    expect(anagram.is_anagram?).to(eq("These words are NOT anagrams!"))
+    expect(anagram.is_anagram?).to(eq(        "These words are NOT anagrams OR not real words!"))
   end
   it("returns 'These words are anagrams' if two words are anagrams even if there is a difference in case") do
     anagram = Anagram.new("Bat", "tAb")
     expect(anagram.is_anagram?).to(eq("These words are anagrams!"))
+  end
+  it("returns 'Please enter a real word!' if a word does not contain a vowel") do
+    anagram = Anagram.new("swrd", "vbnm")
+    expect(anagram.is_anagram?).to(eq("These words are NOT anagrams OR not real words!"))
   end
   # it("returns false if any of the words are NOT words indicated by three similar letters in a row") do
   #   anagram = Anagram.new()
