@@ -24,6 +24,10 @@ describe('#week_7') do
     anagram = Anagram.new("Conversation", "Voices rant on")
     expect(anagram.sent_is_anagram?).to(eq("Your sentences are anagrams!"))
   end
+  it("ensures that all words in compared sentences are real words") do
+    anagram = Anagram.new("Taco cat", "Caat tco")
+    expect(anagram.sent_real?).to(eq("Your sentences contain one or more non-words"))
+  end
 
 
   # it("returns false if any of the words are NOT words indicated by three similar letters in a row") do
